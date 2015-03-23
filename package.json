@@ -6,6 +6,7 @@
   "license": "AGPL",
   "private": true,
   "devDependencies": {
+    "browser-sync": "latest",
     "del": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",

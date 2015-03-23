@@ -1,6 +1,7 @@
 // Load plugins and declare variables
 var gulp = require("gulp"),
     del = require("del"),
+    browsersync = require("browser-sync"),
     plumber = require("gulp-plumber"),
     notify = require("gulp-notify"),
     sourcemaps = require("gulp-sourcemaps"),
@@ -10,6 +11,7 @@ var gulp = require("gulp"),
     autoprefixer = require("gulp-autoprefixer"),
     minify = require("gulp-minify-css");
 
+// Build stylesheets
 gulp.task("styles", [ "clean" ], function() {
     return gulp.src("src/scss/**/*.scss")
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
@@ -23,12 +25,28 @@ gulp.task("styles", [ "clean" ], function() {
         .pipe(gulp.dest("dist/styles"));
 });
 
+// Clean generated files
 gulp.task("clean", function() {
     return del("dist");
 });
 
+// Watch for changes
 gulp.task("watch", function() {
     gulp.watch("src/scss/**/*.scss", [ "styles" ]);
 });
 
-gulp.task("default", [ "styles" ]);
+// Synchronise file changes in browser
+gulp.task("browsersync", function() {
+    browsersync({
+        server: { baseDir: "./" }
+    });
+});
+
+// Serve in a web browser
+gulp.task("serve", [ "browsersync", "watch" ]);
+
+// Build files
+gulp.task("build", [ "styles"  ]);
+
+// Default Task
+gulp.task("default", [ "build" ]);

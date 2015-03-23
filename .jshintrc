@@ -1,7 +1,4 @@
 {
-	"node": true,
-	"unused": true,
-	"undef": true,
-	"curly": false,
-	"notypeof": true
+	"browser": true,
+	"jQuery": true
 }
