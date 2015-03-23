@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Scrollback - Where communities hangout</title>
+		<title>Scrollback - Where communities hangout</title>
 
-    <meta name="description" content="Scrollback is a beautiful, open source text chat service designed for communities. Scrollback chat rooms can be embedded in websites, linked with Twitter hashtags or with IRC channels.">
+		<meta name="description" content="Scrollback is a beautiful, open source text chat service designed for communities. Scrollback chat rooms can be embedded in websites, linked with Twitter hashtags or with IRC channels.">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="stylesheet" type="text/css"  media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+		<link rel="stylesheet" type="text/css"  media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="./dist/styles/banner.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="./dist/styles/banner.min.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-  </head>
+	</head>
 
-  <body>
+	<body>
 
 
-    <div class="banner">
-       <nav class="navbar">
-         <ul class="navbar-right">
-           <li class="navbar-item"><a href="#">Blog</a></li>
-           <li class="navbar-item"><a href="#">Features</a></li>
-         </ul>
-       </nav>
+		<div class="banner">
+			 <nav class="navbar">
+				 <ul class="navbar-right">
+					 <li class="navbar-item"><a href="#">Blog</a></li>
+					 <li class="navbar-item"><a href="#">Features</a></li>
+				 </ul>
+			 </nav>
 
-      <div class="banner-content">
-        <div class="banner-content-inner">
-          <img src="./assets/banner/scrollback-large.png">
-          <h2>Where communities hang out!</h2>
+			<div class="banner-content">
+				<div class="banner-content-inner">
+					<img src="./assets/banner/scrollback-large.png">
+					<h2>Where communities hang out</h2>
 
-          <form class="banner-form">
-            <input type="text" class="linked go-to-room" placeholder="Go to Room" autofocus><input type="submit" class="linked" value="Go">
-          </form>
-        </div>
-      </div>
-    </div>
+					<form class="banner-form">
+						<input type="text" class="linked go-to-room" placeholder="Go to Room" autofocus><input type="submit" class="linked" value="Go">
+					</form>
+				</div>
+			</div>
+		</div>
 
-    <script>
+		<script>
 		(function() {
 			'use strict';
 
 			var form = document.getElementsByTagName('form')[0],
-			  input = document.getElementsByClassName('go-to-room')[0];
+				input = document.getElementsByClassName('go-to-room')[0];
 
 			form.addEventListener('submit', function(e) {
 				var room = input.value;
 
 				if (room) {
-				  window.parent.location.href = 'https://scrollback.io/' + room;
+					window.parent.location.href = 'https://scrollback.io/' + room;
 				}
 
 				e.preventDefault();
 			}, false);
 		}());
 	</script>
-  </body>
+	</body>
 </html>
