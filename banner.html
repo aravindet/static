@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" type="text/css"  media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/dist/styles/banner.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./dist/styles/banner.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,7 @@
 
       <div class="banner-content">
         <div class="banner-content-inner">
-          <img src="/assets/banner/scrollback-large.png">
+          <img src="./assets/banner/scrollback-large.png">
           <h2>Where communities hang out!</h2>
 
           <form class="banner-form">
@@ -52,22 +52,22 @@
     </div>
 
     <script>
-      'use strict';
+		(function() {
+			'use strict';
 
-      var form = document.getElementsByTagName('form')[0],
-          input = document.getElementsByClassName('go-to-room')[0];
+			var form = document.getElementsByTagName('form')[0],
+			  input = document.getElementsByClassName('go-to-room')[0];
 
-      form.addEventListener('submit', function(e) {
-        var room = input.value;
+			form.addEventListener('submit', function(e) {
+				var room = input.value;
 
-        if (room) {
-          window.parent.location.href = 'https://scrollback.io/' + room;
-        }
+				if (room) {
+				  window.parent.location.href = 'https://scrollback.io/' + room;
+				}
 
-        e.preventDefault();
-      }, false);
-    </script>
-
-
+				e.preventDefault();
+			}, false);
+		}());
+	</script>
   </body>
 </html>
