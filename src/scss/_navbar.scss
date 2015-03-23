@@ -1,0 +1,39 @@
+.navbar {
+  @extend %clearfix;
+
+  width: 100%;
+  padding: .5em;
+
+  > ul { list-style: none; }
+
+  &-left { float: left; }
+
+  &-right { float: right; }
+
+  &-item {
+    float: left;
+
+    > a {
+      display: block;
+      padding: .75em 1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $light-color;
+      border-radius: $roundness;
+      border: 0;
+      opacity: .5;
+
+      &:focus { opacity: 1; }
+
+      &:hover {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, .4);
+      }
+
+      &:active {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, .5);
+      }
+    }
+  }
+}
