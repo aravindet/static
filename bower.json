@@ -1,0 +1,17 @@
+{
+  "name": "Static",
+  "version": "1.0.0",
+  "license": "AGPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "lace": "latest"
+  }
+}

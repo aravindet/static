@@ -1,0 +1,20 @@
+{
+  "name": "Static",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "AGPL",
+  "private": true,
+  "devDependencies": {
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-combine-mq": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest"
+  }
+}
