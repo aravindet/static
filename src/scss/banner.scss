@@ -1,9 +1,12 @@
 @import "../../bower_components/lace/src/scss/functions";
 @import "../../bower_components/lace/src/scss/global";
 @import "../../bower_components/lace/src/scss/base";
+@import "../../bower_components/lace/src/scss/grid";
 @import "../../bower_components/lace/src/scss/clearfix";
 
 @import "navbar";
+
+@include grid;
 
 html, body { height: 100%; }
 
