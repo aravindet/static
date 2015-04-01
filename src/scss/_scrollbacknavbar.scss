@@ -1,0 +1,86 @@
+// you don't need these
+$light-color: #fff;
+$link-color: blue;
+$roundness: 2px;
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #333;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:link { border-bottom: 1px solid currentColor; }
+
+    &:hover, &:focus { color: darken($link-color, 15%); }
+
+    &:active { color: darken($link-color, 30%); }
+}
+
+%clearfix {
+    *zoom: 1;
+
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after { clear: both; }
+}
+// upto here
+
+.scrollbacknavbar {
+  @extend %clearfix;
+
+  width: 100%;
+  /*padding: .5em;*/
+
+  > ul { list-style: none; }
+
+  &-left { float: left; }
+
+  &-right { float: right; }
+  &-feature{
+    background-color: #3ca;
+    height: 3.5em;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  }
+
+  &-item {
+    float: left;
+
+    > a {
+
+      padding: 1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $light-color;
+      border-radius: $roundness;
+      border: 0;
+      opacity: .5;
+
+      &:focus { opacity: 1; }
+
+      &:hover {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, .1);
+      }
+
+      &:active {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, .15);
+      }
+    }
+  }
+}
+
+
+
+
+
